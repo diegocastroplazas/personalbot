@@ -11,6 +11,7 @@ while 1:
         text = input("Type a text: ")
         response = bot.send_text(text)
         response_text = bot.get_text_response(response)
+        bot.get_intent_method(response)
         driver.say(response_text)
     except DialogFailed:
         driver.say("Disculpa, no te entendí")
